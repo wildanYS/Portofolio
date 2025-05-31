@@ -1,0 +1,218 @@
+/* Global style */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  color: black;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+  
+/* Header */
+header {
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+  
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+  
+nav .nav-1 {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-1.active {
+  color: blue;
+  font-weight: bold;
+}
+
+nav .nav-1:hover {
+  color: blue;
+}
+
+/*section*/
+.hero-2 {
+  padding: 2rem;
+}
+
+/*artikel*/
+.container {
+  padding: 3rem;
+}
+
+.container-2kolom {
+  display: flex;
+  flex-direction: column; /* penting! arah vertikal */
+  align-items: center;
+  gap: 1em;
+}
+
+.kolom {
+  width: 500px;;
+  padding: 1em;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.garis-vertikal {
+  width: 2px;
+  height: 100px; /* Ubah sesuai panjang yang diinginkan */
+  background-color: black;
+}
+
+.container-card {
+  max-width: 30%;
+}
+
+.card-2 {
+  display: flex;
+  justify-content: end;
+  padding: 1em;
+  margin: 1em;
+}
+
+/**/
+.card-teks-2 {
+  background-color:#f9f9fb;
+  display: flex;
+  justify-content: space-between; /* kiri & kanan */
+  align-items: flex-start;
+  position: relative;
+}
+
+.card-3 {
+  padding: 1em;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.card-sosmed {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  display: flex;
+  padding: 0.5em;
+  margin-top: 1em;
+  gap: 1em
+}
+
+.nav-a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+  width: 100px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.nav-b {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+  width: 100px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.nav-c {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+  width: 100px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-a:hover {
+  border: 2px solid red;
+}
+.nav-b:hover {
+  border: 2px solid black;
+}
+.nav-c:hover {
+  border: 2px solid green;
+}
+
+/*animasi teks muncul*/
+.animasi-muncul {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+.animasi-muncul.muncul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*media mobile*/
+@media (max-width: 768px) {
+  .container-2kolom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kolom {
+    width: 90% !important;
+    margin-bottom: 1em;
+  }
+
+  .card-sosmed {
+    position: static;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    order: 2;
+  }
+
+  .card-teks-2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-3,
+  .card {
+    order: 1;
+  }
+}
+
+/*tampilan Z fold 5*/
+@media (max-width: 400px) {
+  .hero {
+    padding: 1em;
+  }
+}
+
+/*media HP kecil*/
+@media (max-width: 320px) {
+  .hero {
+    padding: 1em;
+  }
+
+  .garis-vertikal {
+    height: 50px;
+  }
+}
